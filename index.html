@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+        window.smoothScroll = function(target) {
+        var scrollContainer = target;
+        do { //find scroll container
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do { //find the top of target relatively to the container
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        scroll = function(c, a, b, i) {
+            i++; if (i > 40) return;
+            c.scrollTop = a + (b - a) / 40 * i;
+            setTimeout(function(){ scroll(c, a, b, i); }, 8);
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149592393-2"></script>
+    
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149592393-2');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kouthar Waled's personal website">
+    <meta name="keywords" content="HTML,CSS,XML">
+    <meta name="author" content="Kouthar Waled">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <script src="https://kit.fontawesome.com/d638ad52c5.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <title>Kouthar Waled</title>
+</head>
+
+<body>
+
+    <div class="top-bar-mobile">
+        <div class="nav-wrapper-mobile" id="navbar-mobile">
+
+            <nav role="navigation" class="menu">
+                <ul class="menu-list">
+                    <li class="menu-About"><a href="mailto:hello@kouthar.com">connect</a></li>
+                    <li class="menu-Design"><a href="assets/2022_Waled_Kouthar.pdf" target="_blank">resume</a></li>
+                    <li class="menu-Resume"><a href="#Design">portfolio</a></li>
+                    <li class="menu-Links"><a href="#About">about</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="top-bar-desktop">
+       
+
+        <div class="nav-wrapper" id="navbar">
+
+            <nav role="navigation" class="menu">
+                <ul class="menu-list">
+                    <li class="menu-About"><a href="mailto:hello@kouthar.com">connect</a></li>
+                    <li class="menu-Design" ><a href="Kouthar_Waled_Design_Resume.pdf" target="_blank">resume</a></li>
+                    <li class="menu-Resume"><a href="#" onclick="smoothScroll(document.getElementById('Design'))">portfolio</a></li>
+                    <li class="menu-Links"><a href="#About">about</a></li>
+                    <li class="logo-item"> <div class="logo">
+                        <a href="index.html">kouthar.</a>
+                    </div></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="website-contents">
+
+
+        <div id="About" class="about">
+
+
+
+            <div class="animation">
+                <img src="assets/bee1.png" alt="">
+            </div>
+
+            <h1 class="salutation">hi, i'm kouthar! &#9728</h1>
+            <h2><mark>I design for people.</mark> </h2>
+
+            <div class="about-paragraph">
+
+                <p class="learn-more"> I'm a Founding Product Designer at <a href="https://www.linkedin.com/company/beblended/" target="_blank">BeBlended</a> and Product Designer at <a href="https://starterhacks.ca/" target="_blank">StarterHacks</a>
+                    passionate about designing beautiful and inclusive products.</mark> </p>
+
+                <p class="learn-more">Interested in learning more?<br>
+
+                <a href="mailto:hello@kouthar.com">Contact me!</a></p>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="Design" class="design">
+            <h2 class="portfolio"></h2>
+
+            <div class="row">
+
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="prose-app.html">
+                                <div class="entry-container-6">
+                                    <img src="assets/yourW-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container6">
+                                            <span class="overlay-title">ProseApp<br><span
+                                                    class="overlay-subtitle">see more</span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="">
+                                <div class="entry-container-5">
+                                    <img src="assets/yourW-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container5">
+                                            <span class="overlay-title">BeBlended Inc.<br><span
+                                                    class="overlay-subtitle">coming soon</span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+           
+            <div class="row">
+
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="airbnb-group-booking.html">
+                                <div class="entry-container-2">
+                                    <img src="assets/yourW-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container2">
+                                            <span class="overlay-title">Airbnb Group Booking <br><span
+                                                    class="overlay-subtitle">see more</span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="campus-resources.html">
+                                <div class="entry-container">
+                                    <img src="assets/yourW-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container2">
+                                            <span class="overlay-title">YourWaterloo<br><br> <span
+                                                    class="overlay-subtitle">see more</span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </a>
+                </div>
+
+
+               
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="index.html">
+                                <div class="entry-container-4">
+                                    <img src="assets/yourW-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container4">
+                                            <span class="overlay-title">Illustrations<br><br> <span
+                                                    class="overlay-subtitle">go to instagram</span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </a>
+                </div>
+
+
+               
+
+
+            </div>
+
+           
+
+
+               
+
+
+            </div>
+            
+
+           
+
+            
+
+
+            
+
+            <!-- <div class="row">
+                <div class="column">
+                    <a href="#">
+                        <div class="entry">
+                            <a href="https://www.instagram.com/kouthart/" target="_blank">
+                                <div class="entry-container-3">
+                                    <img src="assets/waterloo-eng-thumbnail.png" alt="" />
+                                    <div class="overlay-container">
+                                        <div class="overlay-container2">
+                                            <span class="overlay-title"><br> <span
+                                                    class="overlay-subtitle"></span> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+               
+            </div> -->
+
+        </div>
+
+    </div>
+
+
+
+    <div id="footer" class="footer">
+        <nav class="links">
+            <ul class="links-list">
+                <li class="links-linkedin"><a href="https://www.linkedin.com/in/kouthar/" target="_blank"><i
+                            class="fab fa-linkedin"></i> </a></li>
+                <li class="links-medium"><a href="https://medium.com/@kouthar" target="_blank"><i
+                            class="fab fa-medium-m"></i> </a></li>
+                <li class="links-github"><a href="https://github.com/kouthar" target="_blank"><i
+                            class="fab fa-github"></i> </a></li>
+                <li class="links-illustrations"><a href="https://www.instagram.com/kouthart/" target="_blank"><i
+                            class="fab fa-instagram"></i>
+                    </a></li>
+
+
+            </ul>
+        </nav>
+        <div class="signature">
+            <p> designed & developed with &#9728 by kouthar waled. <p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
